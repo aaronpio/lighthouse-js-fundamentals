@@ -2,16 +2,21 @@
 
 const loopyLighthouse = (range, multiples, words) => {
 
-    for (let num = 100 ; num <= 200 ; num++) {
+    let multOne = multiples[0]
+    let multTwo = multiples[1]
+    let wordOne = words[0]
+    let wordTwo = words[1]
 
-        if (num % 3 === 0 && num % 4 !== 0) {
-        console.log("Loopy")
-        } else if (num % 4 === 0 && num % 3 !== 0) {
-        console.log("Lighthouse")
-        } else if (num % 3 === 0 && num % 3 === 0) {
-        console.log("LoopyLighthouse")
-        } else if (num % 3 !== 0 && num % 4 !== 0) {
-        console.log(num)
+    for (let num = range[0] ; num <= range[1] ; num++) {
+
+        if (num % multOne === 0 && num % multTwo !== 0) {
+            console.log(wordOne)
+        } else if (num % multTwo === 0 && num % multOne !== 0) {
+            console.log(wordTwo)
+        } else if (num % multOne === 0 && num % multOne === 0) {
+            console.log(wordOne+wordTwo)
+        } else if (num % multOne !== 0 && num % multTwo !== 0) {
+            console.log(num)
         }
     
     }
